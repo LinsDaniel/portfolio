@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Currículo - Daniel Lins de Melo</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #f5f5f5;
+      padding: 20px;
+    }
+
+    .resume-container {
+      max-width: 210mm;
+      margin: 0 auto;
+      background: white;
+      padding: 40px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+    }
+
+    .header {
+      text-align: center;
+      border-bottom: 3px solid #0077ff;
+      padding-bottom: 20px;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 32px;
+      color: #0077ff;
+      margin-bottom: 5px;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+
+    .header .subtitle {
+      font-size: 16px;
+      color: #666;
+      margin-bottom: 15px;
+    }
+
+    .contact-info {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      font-size: 13px;
+      color: #555;
+    }
+
+    .contact-info div {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .contact-info i {
+      color: #0077ff;
+    }
+
+    .section {
+      margin-bottom: 25px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      color: #0077ff;
+      text-transform: uppercase;
+      border-bottom: 2px solid #0077ff;
+      padding-bottom: 5px;
+      margin-bottom: 15px;
+      letter-spacing: 1px;
+    }
+
+    .section-content {
+      font-size: 14px;
+      color: #444;
+      text-align: justify;
+    }
+
+    .education-item, .course-item {
+      margin-bottom: 15px;
+    }
+
+    .education-item h3, .course-item h3 {
+      font-size: 15px;
+      color: #333;
+      margin-bottom: 3px;
+    }
+
+    .education-item .institution, .course-item .institution {
+      font-size: 13px;
+      color: #0077ff;
+      font-weight: 600;
+      margin-bottom: 2px;
+    }
+
+    .education-item .period, .course-item .period {
+      font-size: 12px;
+      color: #666;
+      margin-bottom: 5px;
+    }
+
+    .course-item .description {
+      font-size: 13px;
+      color: #555;
+      margin-top: 5px;
+    }
+
+    .skills-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .skills-list li {
+      font-size: 13px;
+      color: #444;
+      margin-bottom: 8px;
+      padding-left: 20px;
+      position: relative;
+    }
+
+    .skills-list li::before {
+      content: "▪";
+      color: #0077ff;
+      font-size: 16px;
+      position: absolute;
+      left: 0;
+    }
+
+    .languages {
+      display: flex;
+      gap: 30px;
+      font-size: 14px;
+    }
+
+    .personal-info {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      font-size: 13px;
+      color: #555;
+      margin-top: 10px;
+    }
+
+    .personal-info div {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    .personal-info i {
+      color: #0077ff;
+    }
+
+    @media print {
+      body {
+        background: white;
+        padding: 0;
+      }
+
+      .resume-container {
+        box-shadow: none;
+        padding: 20px;
+        max-width: 100%;
+      }
+
+      .section {
+        page-break-inside: avoid;
+      }
+
+      .header {
+        page-break-after: avoid;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .resume-container {
+        padding: 20px;
+      }
+
+      .header h1 {
+        font-size: 24px;
+      }
+
+      .contact-info {
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .personal-info {
+        flex-direction: column;
+        gap: 10px;
+      }
+    }
+
+    .print-button {
+      position: fixed;
+      bottom: 30px;
+      right: 30px;
+      background: linear-gradient(135deg, #0077ff, #005fcc);
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      border-radius: 50px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 4px 15px rgba(0, 119, 255, 0.3);
+      transition: all 0.3s ease;
+      z-index: 1000;
+    }
+
+    .print-button:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(0, 119, 255, 0.4);
+    }
+
+    .print-button i {
+      margin-right: 8px;
+    }
+
+    @media print {
+      .print-button {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="resume-container">
+    <div class="header">
+      <h1>DANIEL LINS DE MELO</h1>
+      <div class="subtitle">Estudante De Tecnologia</div>
+      <div class="contact-info">
+        <div><i class="fas fa-phone"></i> (81) 98212-4698</div>
+        <div><i class="fas fa-phone"></i> (81) 99128-2602</div>
+        <div><i class="fas fa-envelope"></i> linsdaniel77@gmail.com</div>
+        <div><i class="fas fa-map-marker-alt"></i> Recife, PE</div>
+      </div>
+      <div class="personal-info">
+        <div><i class="fas fa-birthday-cake"></i> 23 Anos</div>
+        <div><i class="fas fa-car"></i> Categoria B</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Objetivo Profissional</h2>
+      <div class="section-content">
+        Desejo fazer parte de uma equipe inovadora e colaborativa, onde eu possa desenvolver ainda mais minhas habilidades profissionais e pessoais, aplicando dedicação, proatividade e um olhar atento às oportunidades de aprendizado. Meu objetivo é contribuir de forma significativa para o sucesso da empresa, agregando valor por meio do comprometimento com resultados de qualidade e do fortalecimento de um ambiente de trabalho dinâmico e inspirador.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Formação Acadêmica</h2>
+      <div class="education-item">
+        <h3>Análise e Desenvolvimento De Sistemas</h3>
+        <div class="institution">Universidade Estácio De Sá</div>
+        <div class="period">2024 - 2027</div>
+      </div>
+      <div class="education-item">
+        <h3>Sistemas Da Informação</h3>
+        <div class="institution">Universidade Estácio De Sá</div>
+        <div class="period">2023 - 2024</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Experiência Profissional</h2>
+      <div class="section-content">
+        Por enquanto, não tenho experiência profissional formal, mas estou super animado para começar essa jornada! Durante meus estudos e em atividades do dia a dia, como projetos na faculdade, trabalhos em grupo ou até iniciativas pessoais, aprendi a ser organizado, a trabalhar bem com outras pessoas e a me dedicar de coração ao que faço. Estou pronto para mergulhar em uma oportunidade que me permita aprender na prática, contribuir com energia positiva e crescer junto com a equipe, levando minha vontade de fazer a diferença.
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Habilidades & Conhecimentos</h2>
+      <ul class="skills-list">
+        <li><strong>Microsoft Office:</strong> Proficiente no uso de Word, Excel e PowerPoint.</li>
+        <li><strong>Comunicação:</strong> Habilidades excelentes de comunicação verbal e escrita.</li>
+        <li><strong>Organização:</strong> Habilidade de gerenciar múltiplas tarefas e prioridades.</li>
+        <li><strong>Trabalho em Equipe:</strong> Habilidade de colaboração eficaz em equipe.</li>
+        <li>Detenho experiência técnica na aplicação de inteligência artificial em projetos de tecnologia.</li>
+      </ul>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Idiomas</h2>
+      <div class="languages">
+        <div><strong>Português:</strong> Nativo</div>
+        <div><strong>Inglês:</strong> Básico</div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2 class="section-title">Cursos</h2>
+      
+      <div class="course-item">
+        <h3>Machine Learning Specialization</h3>
+        <div class="institution">Stanford University & DeepLearning.AI – Coursera</div>
+        <div class="period"><i class="fas fa-clock"></i> 60 horas | <i class="fas fa-calendar-check"></i> Conclusão: 23/01/2025</div>
+        <div class="description">
+          Especialização em aprendizado de máquina com foco prático em algoritmos supervisionados e não supervisionados, regressão, classificação, redes neurais e implementação de modelos em Python. Ministrado por Andrew Ng.
+        </div>
+      </div>
+
+      <div class="course-item">
+        <h3>Montagem e Manutenção de Computadores do ZERO</h3>
+        <div class="institution">Grupo Happy Hardware Informática – Udemy</div>
+        <div class="period"><i class="fas fa-clock"></i> 16 horas | <i class="fas fa-calendar-check"></i> Conclusão: 12/05/2024</div>
+        <div class="description">
+          Curso prático abordando montagem, diagnóstico, manutenção de PCs e instalação de sistemas operacionais, desde a identificação de componentes até a solução de problemas e otimização de desempenho.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button class="print-button" onclick="window.print()">
+    <i class="fas fa-print"></i> Imprimir / Salvar PDF
+  </button>
+
+  <script>
+    // Adiciona classe loaded às imagens quando carregarem
+    document.addEventListener('DOMContentLoaded', function() {
+      const images = document.querySelectorAll('img[loading="lazy"]');
+      images.forEach(img => {
+        if (img.complete) {
+          img.classList.add('loaded');
+        } else {
+          img.addEventListener('load', function() {
+            this.classList.add('loaded');
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>
